@@ -467,14 +467,14 @@ MonoBehaviour:
   m_LastFolders:
   - Assets
   m_LastFoldersGridSize: 48
-  m_LastProjectPath: D:\Game_3D1
+  m_LastProjectPath: D:\game3dhithub\game_3d1\Game_3D1
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 60}
-    m_SelectedIDs: 385a0000
-    m_LastClickedID: 23096
-    m_ExpandedIDs: 00000000385a000000ca9a3bffffff7f
+    m_SelectedIDs: c4590000
+    m_LastClickedID: 22980
+    m_ExpandedIDs: 00000000c459000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -502,7 +502,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000385a0000
+    m_ExpandedIDs: 00000000c4590000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -644,7 +644,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 6cf8ffff
+      m_ExpandedIDs: 30fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1089,9 +1089,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
   m_Size:
-    m_Target: 10
+    m_Target: 15.529694
     speed: 2
-    m_Value: 10
+    m_Value: 14.86095
   m_Ortho:
     m_Target: 0
     speed: 2
