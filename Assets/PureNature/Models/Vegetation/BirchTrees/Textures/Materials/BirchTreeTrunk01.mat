@@ -2,21 +2,33 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: BirchTreeTrunk01
-  m_Shader: {fileID: 4800000, guid: d9d09221179189a449fe37a0ddad2931, type: 3}
-  m_ShaderKeywords: _BASEWINDCHANNEL_B _BASEWIND_B _BLENDNORMALS_ON _DEPOSITCHANNEL_G
-    _DEPOSITLAYER_B _LAYERCHANNEL_G _NORMALMAP _USEVERTEXCOLOR_ON _VERTEXCOLORCHANNEL_RGBA
+  m_Shader: {fileID: 10600, guid: 0000000000000000f000000000000000, type: 0}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords:
+  - _BASEWINDCHANNEL_B
+  - _BASEWIND_B
+  - _BLENDNORMALS_ON
+  - _DEPOSITCHANNEL_G
+  - _DEPOSITLAYER_B
+  - _LAYERCHANNEL_G
+  - _NORMALMAP
+  - _USEVERTEXCOLOR_ON
+  - _VERTEXCOLORCHANNEL_RGBA
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -48,9 +60,17 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _DetailTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _EmissionMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 0.5, y: 0.1}
+        m_Offset: {x: 0, y: 0}
+    - _GlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _LayerMask:
         m_Texture: {fileID: 2800000, guid: e1f9e4b4f78e10041804ffee938870e2, type: 3}
@@ -76,6 +96,14 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _ShadowOffset:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TranslucencyMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _WindNoise1:
         m_Texture: {fileID: 2800000, guid: 282028860199a5f49a51216f309f1410, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -84,14 +112,18 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - _2ndNormalPower: 1
+    - _AO: 2.4
+    - _BaseLight: 0.35
     - _BaseWind: 2
     - _BaseWindChannel: 2
     - _BlendNormals: 1
     - _BumpScale: 1
     - _Contrast: 100
     - _Contrast2: 0
+    - _Cull: 2
     - _Cutoff: 0.5
     - _DepositChannel: 1
     - _DepositContrast: 0.4
@@ -126,6 +158,7 @@ Material:
     - _MetallicPower: 0
     - _Mode: 0
     - _NormalPower: 1
+    - _Occlusion: 7.5
     - _OcclusionPower: 1
     - _OcclusionStrength: 1
     - _Parallax: 0.02
@@ -133,11 +166,15 @@ Material:
     - _Position: 6.2
     - _SeeVertexColor: 0
     - _SeeVertexColor1: 0
+    - _ShadowStrength: 1
+    - _Shininess: 0.078125
     - _SmoothnessPower: 1
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
+    - _SquashAmount: 1
     - _SrcBlend: 1
     - _Tiling: 0.5
+    - _TranslucencyViewDependency: 0.7
     - _TrunkWindAmplitude: 0.5
     - _TrunkWindPower: 1
     - _UVSec: 0
@@ -154,6 +191,7 @@ Material:
     - _WindPosContrast: 6.5
     - _WindPosition: 6
     - _WindPower: 0.01
+    - _WindQuality: 0
     - _WindSpeed: 1
     - _WindTrunkContrast: 0
     - _WindTrunkPosition: 1
@@ -163,3 +201,9 @@ Material:
     - _2ndColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _HueVariation: {r: 1, g: 0.5, b: 0, a: 0.1}
+    - _SpecColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _TranslucencyColor: {r: 0.73, g: 0.85, b: 0.40999997, a: 1}
+    - _TreeInstanceColor: {r: 1, g: 1, b: 1, a: 1}
+    - _TreeInstanceScale: {r: 1, g: 1, b: 1, a: 1}
+  m_BuildTextureStacks: []
