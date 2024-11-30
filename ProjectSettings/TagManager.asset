@@ -8,11 +8,13 @@ TagManager:
   - Weapon
   - Enemy
   - Coin
+  - CinemachineTaget
+  - Ground
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
   - 
