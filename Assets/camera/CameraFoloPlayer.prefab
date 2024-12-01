@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7507466652267908347}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: CameraFoloPlayer
   m_TagString: CinemachineTaget
   m_Icon: {fileID: 0}
