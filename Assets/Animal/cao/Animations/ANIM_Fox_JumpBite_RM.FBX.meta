@@ -1,0 +1,467 @@
+fileFormatVersion: 2
+guid: b9db0cd1e1ec0e34bbd34f5eaf63a419
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: "Avatar Rig Configuration mis-match. Inbetween bone rotation
+      in configuration does not match rotation in animation file:\n\t'Fox_ L HorseLink'
+      : rotation error = 65.365105 deg\n\t'Fox_ R HorseLink' : rotation error = 65.364647
+      deg\n\t'Fox_ Neck1' : rotation error = 0.817019 deg\n\t'Fox_ Neck2' : rotation
+      error = 0.817001 deg\n"
+    animationImportErrors: 
+    animationImportWarnings: "\nClip 'Unreal Take' has import animation warnings
+      that might lower retargeting quality:\n\t'Fox_ L HorseLink' is inbetween humanoid
+      transforms and has rotation animation that will be discarded.\n\t'Fox_ R HorseLink'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Fox_
+      Neck1' is inbetween humanoid transforms and has rotation animation that will
+      be discarded.\n\t'Fox_ Neck2' is inbetween humanoid transforms and has rotation
+      animation that will be discarded.\n"
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human:
+    - boneName: Fox_ Pelvis
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fox_ L Thigh
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fox_ R Thigh
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fox_ L Calf
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fox_ R Calf
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fox_ L Foot
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fox_ R Foot
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fox_ Spine
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fox_ Spine1
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fox_ Neck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fox_ Head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fox_ L Clavicle
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fox_ R Clavicle
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fox_ L UpperArm
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fox_ R UpperArm
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fox_ L Forearm
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fox_ R Forearm
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fox_ L Hand
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fox_ R Hand
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fox_ L Finger0
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fox_ R Finger0
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: Fox(Clone)
+      parentName: 
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -1, y: 0, z: -0.0000003071097, w: 0}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SK_Fox
+      parentName: Fox(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: root
+      parentName: Fox(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.00000008940697, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Fox_
+      parentName: root
+      position: {x: -0, y: 0.162, z: 0.317}
+      rotation: {x: 0.4999998, y: -0.5000003, z: 0.49999973, w: 0.50000024}
+      scale: {x: 1.0000005, y: 1.0000002, z: 1.0000002}
+    - name: Fox_ Pelvis
+      parentName: Fox_
+      position: {x: -0.31699988, y: -0.00000071525557, z: 0.5336778}
+      rotation: {x: 0.5, y: -0.5, z: -0.5, w: -0.5}
+      scale: {x: 1.0000002, y: 1.0000006, z: 1.0000002}
+    - name: Fox_ L Thigh
+      parentName: Fox_ Pelvis
+      position: {x: 0.000000025673746, y: 0.00000008228091, z: 0.05463505}
+      rotation: {x: 0, y: 1, z: 0, w: -0.00000004371139}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000002}
+    - name: Fox_ L Calf
+      parentName: Fox_ L Thigh
+      position: {x: -0.13475327, y: -0.0000000060219545, z: 0.000000002260352}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1.0000007, z: 1.0000001}
+    - name: Fox_ L HorseLink
+      parentName: Fox_ L Calf
+      position: {x: -0.122936964, y: 3.6817083e-10, z: -0.0000000011648994}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999998, y: 1.0000002, z: 1.0000001}
+    - name: Fox_ L Foot
+      parentName: Fox_ L HorseLink
+      position: {x: -0.07122787, y: 0.000000004170419, z: -0.0000000039033075}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000002}
+    - name: Fox_ R Thigh
+      parentName: Fox_ Pelvis
+      position: {x: -0.000000063820714, y: -0.00000008228091, z: -0.05463505}
+      rotation: {x: 0, y: 1, z: 0, w: -0.00000004371139}
+      scale: {x: 1.0000006, y: 1.0000007, z: 1.0000011}
+    - name: Fox_ R Calf
+      parentName: Fox_ R Thigh
+      position: {x: -0.13475327, y: -0.0000000015019901, z: 1.669905e-10}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999998, y: 1.0000002, z: 0.99999994}
+    - name: Fox_ R HorseLink
+      parentName: Fox_ R Calf
+      position: {x: -0.12293697, y: -0.000000006946019, z: -0.0000000026206968}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999996, y: 1.0000001, z: 0.99999994}
+    - name: Fox_ R Foot
+      parentName: Fox_ R HorseLink
+      position: {x: -0.071227856, y: -0.000000009108346, z: -6.722378e-11}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1, z: 1}
+    - name: Fox_ Spine
+      parentName: Fox_ Pelvis
+      position: {x: -0.07193903, y: -0.0000834465, z: 0.00000006944998}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: Fox_ Spine1
+      parentName: Fox_ Spine
+      position: {x: -0.10478871, y: -0.0001104598, z: -3.064005e-10}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: Fox_ Neck
+      parentName: Fox_ Spine1
+      position: {x: -0.13848615, y: -0.045735735, z: -0.0000001266333}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 0.99999994, z: 1}
+    - name: Fox_ Neck1
+      parentName: Fox_ Neck
+      position: {x: -0.060777657, y: -0.000048137972, z: -1.3347749e-10}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999998, y: 1, z: 1}
+    - name: Fox_ Neck2
+      parentName: Fox_ Neck1
+      position: {x: -0.060777683, y: -0.000048068632, z: -1.3331337e-10}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1}
+    - name: Fox_ Head
+      parentName: Fox_ Neck2
+      position: {x: -0.061149977, y: 0.00013784372, z: -1.3172437e-10}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000004, z: 1.0000004}
+    - name: Fox_ Queue de cheval 1
+      parentName: Fox_ Head
+      position: {x: 0.013492705, y: -0.0038994178, z: -0.00000006193201}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000005, y: 1.0000006, z: 1.0000004}
+    - name: Fox_ L Clavicle
+      parentName: Fox_ Spine1
+      position: {x: -0.13967404, y: -0.011410467, z: 0.017553179}
+      rotation: {x: 0.7071068, y: -0.000000030908623, z: -0.7071068, w: 0.000000030908623}
+      scale: {x: 1, y: 0.9999998, z: 0.9999997}
+    - name: Fox_ L UpperArm
+      parentName: Fox_ L Clavicle
+      position: {x: -0.055491623, y: -0.000000010343193, z: 0.0000000019931605}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000005, y: 1.0000002, z: 1.0000005}
+    - name: Fox_ L Forearm
+      parentName: Fox_ L UpperArm
+      position: {x: -0.12496597, y: 0.000000007556633, z: 0.0000000017147127}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999996, y: 1.0000006, z: 1.0000002}
+    - name: Fox_ L Hand
+      parentName: Fox_ L Forearm
+      position: {x: -0.121565446, y: 0.000000003456723, z: 0.0000000012339564}
+      rotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1}
+    - name: Fox_ L Finger0
+      parentName: Fox_ L Hand
+      position: {x: -0.06113933, y: 0.0034727666, z: -0.002363609}
+      rotation: {x: 0, y: 0.3826835, z: 0, w: -0.9238795}
+      scale: {x: 1.0000002, y: 1.0000004, z: 1.0000002}
+    - name: Fox_ R Clavicle
+      parentName: Fox_ Spine1
+      position: {x: -0.13967404, y: -0.011410374, z: -0.017553244}
+      rotation: {x: 0.7071068, y: -0.000000030908623, z: 0.7071068, w: -0.000000030908623}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000004}
+    - name: Fox_ R UpperArm
+      parentName: Fox_ R Clavicle
+      position: {x: -0.05549161, y: -0.000000004328329, z: -0.0000000075623205}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 0.9999998, z: 1.0000001}
+    - name: Fox_ R Forearm
+      parentName: Fox_ R UpperArm
+      position: {x: -0.12496597, y: 0.000000011380289, z: -4.2858905e-10}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000006, z: 1.0000001}
+    - name: Fox_ R Hand
+      parentName: Fox_ R Forearm
+      position: {x: -0.121565446, y: 0.0000000020983146, z: -0.0000000019232254}
+      rotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+      scale: {x: 1.0000001, y: 0.99999994, z: 1.0000002}
+    - name: Fox_ R Finger0
+      parentName: Fox_ R Hand
+      position: {x: -0.061139327, y: 0.0034727762, z: 0.0023636075}
+      rotation: {x: 0, y: 0.38268346, z: 0, w: 0.9238795}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1.0000005}
+    - name: Fox_ Tail
+      parentName: Fox_ Pelvis
+      position: {x: 0.05143585, y: -0.029142035, z: -0.000000010425536}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 0.9999998, z: 1.0000002}
+    - name: Fox_ Tail1
+      parentName: Fox_ Tail
+      position: {x: -0.04576835, y: -0.00005633457, z: -1.5614351e-10}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 0.99999994, z: 1}
+    - name: Fox_ Tail2
+      parentName: Fox_ Tail1
+      position: {x: -0.07075223, y: -0.00006530224, z: -1.8109092e-10}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 0.99999994, z: 1.0000004}
+    - name: Fox_ Tail3
+      parentName: Fox_ Tail2
+      position: {x: -0.082018554, y: -0.00006448632, z: -1.788267e-10}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 0.99999994, z: 1.0000002}
+    - name: Fox_ Tail4
+      parentName: Fox_ Tail3
+      position: {x: -0.08104189, y: -0.000054785658, z: -1.5206346e-10}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1, z: 1.0000001}
+    - name: Fox_ Tail5
+      parentName: Fox_ Tail4
+      position: {x: -0.068808675, y: -0.000056306864, z: -1.5632017e-10}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000005, y: 1.0000001, z: 1.0000004}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 1
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 2b2d509d57e5f0f49ac27fd78e69758b, type: 3}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 3
+  humanoidOversampling: 1
+  avatarSetup: 2
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
