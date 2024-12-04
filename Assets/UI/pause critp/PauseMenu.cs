@@ -1,63 +1,68 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.SceneManagement; // Để chuyển scene khi cần
+using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
-    [SerializeField] GameObject pauseMenu; // Menu tạm dừng
+    public GameObject loseMenu; // Kéo UI Panel menu thua vào đây
+    public Text messageText;    // Text để hiển thị "You Lose" hoặc "You Win"
 
-    private bool isPaused = false; // Trạng thái tạm dừng
+    private bool isGamePaused = false;
 
-    void Update()
+    void Start()
     {
-        // Kiểm tra khi nhấn phím P
-        if (Input.GetKeyDown(KeyCode.P))
+        // Đảm bảo menu được ẩn khi bắt đầu game
+        if (loseMenu != null)
         {
-            if (isPaused)
-            {
-                Resume(); // Tiếp tục game
-            }
-            else
-            {
-                Pause(); // Tạm dừng game
-            }
-        }
-
-        // Điều chỉnh trạng thái con trỏ chuột theo menu
-        if (isPaused)
-        {
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-        }
-        else
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
+            loseMenu.SetActive(false);
         }
     }
 
-    public void Pause()
+    // Gọi hàm này khi người chơi thua
+    public void PlayerLose(string message)
     {
-        pauseMenu.SetActive(true); // Hiển thị menu
-        Time.timeScale = 0; // Dừng thời gian game
-        isPaused = true; // Cập nhật trạng thái tạm dừng
+        // Hiển thị thông báo
+        if (messageText != null)
+        {
+            messageText.text = message;
+        }
+
+        // Hiển thị menu
+        if (loseMenu != null)
+        {
+            loseMenu.SetActive(true);
+        }
+
+        // Dừng game
+        PauseGame();
     }
 
-    public void Resume()
+    // Hàm dừng game
+    private void PauseGame()
     {
-        pauseMenu.SetActive(false); // Ẩn menu
-        Time.timeScale = 1; // Tiếp tục thời gian game
-        isPaused = false; // Cập nhật trạng thái
+        isGamePaused = true;
+        Time.timeScale = 0f; // Dừng toàn bộ thời gian trong game
     }
 
-    public void Home()
+    // Hàm tiếp tục game (nếu cần)
+    public void ResumeGame()
     {
-        Time.timeScale = 1; // Đặt lại thời gian bình thường
-        SceneManager.LoadScene("Main Menu"); // Chuyển về menu chính
+        isGamePaused = false;
+        Time.timeScale = 1f; // Khôi phục thời gian trong game
     }
 
-    public void Restart()
+    // Nút Retry
+    public void RetryGame()
     {
-        Time.timeScale = 1; // Đặt lại thời gian bình thường
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // Restart scene hiện tại
+        ResumeGame();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // Tải lại scene hiện tại
+    }
+
+    // Nút Quit hoặc về menu chính
+    public void QuitToMainMenu()
+    {
+        ResumeGame();
+        SceneManager.LoadScene("MainMenu"); // Đặt tên scene menu chính
     }
 }
+ 

@@ -10,6 +10,7 @@ TagManager:
   - Coin
   - CinemachineTaget
   - Ground
+  - win
   layers:
   - Default
   - TransparentFX
