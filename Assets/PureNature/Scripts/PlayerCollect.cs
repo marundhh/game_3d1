@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerCollect : MonoBehaviour
 {
-    public int score = 0;
+    public int coin = 0;
     public TMPro.TextMeshProUGUI scoreText; 
 
     void Start()
@@ -17,7 +17,7 @@ public class PlayerCollect : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Coin"))
         {
-            score += 1;
+            coin += 1;
             Destroy(other.gameObject);
             UpdateScoreText();
         }
@@ -25,6 +25,6 @@ public class PlayerCollect : MonoBehaviour
 
     void UpdateScoreText()
     {
-        scoreText.text = "Score: " + score;
+        scoreText.text = "Coin: " + coin;
     }
 }
