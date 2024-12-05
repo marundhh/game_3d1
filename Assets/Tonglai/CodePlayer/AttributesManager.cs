@@ -1,11 +1,11 @@
 ﻿using UnityEngine;
-
-using UnityEngine;
 using UnityEngine.UI;
 
 public class AttributesManager : MonoBehaviour
 {
     public int health;
+    public int maxHealth; // Giá trị tối đa của máu
+    public Slider healthSlider; // Tham chiếu đến Slider hiển thị máu
     public int attack;
     public float critDamage = 1.5f;
     public float critChance = 0.5f;
@@ -18,13 +18,43 @@ public class AttributesManager : MonoBehaviour
     public void TakeDamage(int amount)
     {
         health -= amount;
+        health = Mathf.Clamp(health, 0, maxHealth); // Đảm bảo máu không giảm dưới 0 hoặc vượt quá maxHealth
+
         DamagePopUpGenerator.Current.CreatePopUp(
             transform.position,
             amount.ToString(),
             Color.yellow
         );
 
-        if (gameObject.CompareTag("Enemy"))
+        if (gameObject.CompareTag("Player"))
+        {
+            // Cập nhật Slider máu
+            if (healthSlider != null)
+            {
+                healthSlider.value = (float)health / maxHealth; // Giá trị từ 0 đến 1
+            }
+            else
+            {
+                Debug.LogWarning("Health Slider is not assigned!");
+            }
+
+            if (health <= 0)
+            {
+                // Hiển thị con trỏ chuột
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+                Time.timeScale = 0; // Pause the game
+                if (gameOverCanvas != null)
+                {
+                    gameOverCanvas.SetActive(true); // Show Game Over Canvas
+                }
+                else
+                {
+                    Debug.LogWarning("Game Over Canvas is not assigned!");
+                }
+            }
+        }
+        else if (gameObject.CompareTag("Enemy"))
         {
             Slider slider = gameObject.transform
                 .GetChild(1).transform
@@ -38,25 +68,6 @@ public class AttributesManager : MonoBehaviour
             if (health <= 0)
             {
                 EnemyDie();
-            }
-        }
-        else if (gameObject.CompareTag("Player"))
-        {
-            if (health <= 0)
-            {
-
-                // Hiển thị con trỏ chuột
-                Cursor.lockState = CursorLockMode.None;
-                Cursor.visible = true;
-                Time.timeScale = 0; // Pause the game
-                if (gameOverCanvas != null)
-                {
-                    gameOverCanvas.SetActive(true); // Show Game Over Canvas
-                }
-                else
-                {
-                    Debug.LogWarning("Game Over Canvas is not assigned!");
-                }
             }
         }
     }
@@ -100,6 +111,13 @@ public class AttributesManager : MonoBehaviour
         if (audioSource == null)
         {
             audioSource = gameObject.AddComponent<AudioSource>();
+        }
+
+        // Gán giá trị ban đầu cho thanh máu nếu tồn tại
+        if (healthSlider != null)
+        {
+            healthSlider.maxValue = 1;
+            healthSlider.value = (float)health / maxHealth;
         }
     }
 }
