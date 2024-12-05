@@ -1,4 +1,4 @@
-using JetBrains.Annotations;
+﻿using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,6 +11,7 @@ public class AttributesManager : MonoBehaviour
     public float critDamage = 1.5f;
     public float critChance = 0.5f;
     public int armor;
+    public GameObject coinPrefab;
 
 
     public void TakeDamage(int amount)
@@ -41,6 +42,7 @@ public class AttributesManager : MonoBehaviour
     public void EnemyDie() 
      {
         Debug.Log("ke thu die");
+        SpawnCoin();
         Destroy(gameObject);
     }
     public void DealDamage(GameObject target)
@@ -56,7 +58,17 @@ public class AttributesManager : MonoBehaviour
             
         }
     }
-    
+    private void SpawnCoin()
+    {
+        if (coinPrefab != null)
+        {
+            Instantiate(coinPrefab, transform.position, Quaternion.identity);
+        }
+        else
+        {
+            Debug.LogWarning("Coin prefab chưa được gán trong Inspector!");
+        }
+    }
     void Start()
     {
 
