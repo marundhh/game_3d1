@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class PlayerCollect : MonoBehaviour
 {
     public int coin = 0;
-    public TMPro.TextMeshProUGUI scoreText; 
+    public TMPro.TextMeshProUGUI scoreText;
+    public AudioClip collectSound;
 
     void Start()
     {
@@ -17,6 +18,10 @@ public class PlayerCollect : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Coin"))
         {
+            if (collectSound != null)
+            {
+                AudioSource.PlayClipAtPoint(collectSound, transform.position);
+            }
             coin += 1;
             Destroy(other.gameObject);
             UpdateScoreText();

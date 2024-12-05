@@ -12,6 +12,8 @@ public class AttributesManager : MonoBehaviour
     public float critChance = 0.5f;
     public int armor;
     public GameObject coinPrefab;
+    public AudioClip hitSound;
+    private AudioSource audioSource;
 
 
     public void TakeDamage(int amount)
@@ -31,7 +33,10 @@ public class AttributesManager : MonoBehaviour
                 .GetChild(0).transform
                 .GetComponent<Slider>();
             slider.value = health;
-
+            if (hitSound != null)
+            {
+                audioSource.PlayOneShot(hitSound);
+            }
             if (health <= 0)
             {
                 EnemyDie();
@@ -71,7 +76,11 @@ public class AttributesManager : MonoBehaviour
     }
     void Start()
     {
-
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
     }
 
     // Update is called once per frame
