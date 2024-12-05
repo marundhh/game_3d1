@@ -23,7 +23,7 @@ public class PauseMenu : MonoBehaviour
         }
 
         // Điều chỉnh trạng thái con trỏ chuột theo menu
-        if (isPaused)
+        if (isPaused || Time.timeScale == 0)
         {
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;

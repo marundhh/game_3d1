@@ -1,7 +1,4 @@
-﻿using JetBrains.Annotations;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class AttributesManager : MonoBehaviour
@@ -13,21 +10,20 @@ public class AttributesManager : MonoBehaviour
     public int armor;
     public GameObject coinPrefab;
     public AudioClip hitSound;
+    public GameObject gameOverCanvas; // Reference to Game Over Canvas
     private AudioSource audioSource;
-
 
     public void TakeDamage(int amount)
     {
         health -= amount;
-        Vector3 rand = new Vector3(Random.Range(9, 0.25f), Random.Range(0, 0.25f), Random.Range(0, 0.25f));
         DamagePopUpGenerator.Current.CreatePopUp(
             transform.position,
             amount.ToString(),
             Color.yellow
-            );
+        );
+
         if (gameObject.CompareTag("Enemy"))
         {
-
             Slider slider = gameObject.transform
                 .GetChild(1).transform
                 .GetChild(0).transform
@@ -42,14 +38,34 @@ public class AttributesManager : MonoBehaviour
                 EnemyDie();
             }
         }
+        else if (gameObject.CompareTag("Player"))
+        {
+            if (health <= 0)
+            {
+
+                // Hiển thị con trỏ chuột
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+                Time.timeScale = 0; // Pause the game
+                if (gameOverCanvas != null)
+                {
+                    gameOverCanvas.SetActive(true); // Show Game Over Canvas
+                }
+                else
+                {
+                    Debug.LogWarning("Game Over Canvas is not assigned!");
+                }
+            }
+        }
     }
 
-    public void EnemyDie() 
-     {
-        Debug.Log("ke thu die");
+    public void EnemyDie()
+    {
+        Debug.Log("Enemy died");
         SpawnCoin();
         Destroy(gameObject);
     }
+
     public void DealDamage(GameObject target)
     {
         var atm = target.GetComponent<AttributesManager>();
@@ -57,12 +73,13 @@ public class AttributesManager : MonoBehaviour
         {
             float totalDamage = attack;
             if (Random.Range(0f, 1f) < critChance)
-
+            {
                 totalDamage *= critDamage;
+            }
             atm.TakeDamage((int)totalDamage);
-            
         }
     }
+
     private void SpawnCoin()
     {
         if (coinPrefab != null)
@@ -71,9 +88,10 @@ public class AttributesManager : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("Coin prefab chưa được gán trong Inspector!");
+            Debug.LogWarning("Coin prefab is not assigned!");
         }
     }
+
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -81,11 +99,5 @@ public class AttributesManager : MonoBehaviour
         {
             audioSource = gameObject.AddComponent<AudioSource>();
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 }
