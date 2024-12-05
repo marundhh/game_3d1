@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 786732850513536458}
   - component: {fileID: 6598926305793536360}
   - component: {fileID: 7043215971295788371}
-  - component: {fileID: 3268854050655406454}
+  - component: {fileID: 306055885413566788}
   - component: {fileID: 457733832540476780}
   - component: {fileID: 5753088904890315948}
   m_Layer: 0
@@ -174,7 +174,7 @@ MonoBehaviour:
   critDamage: 1.5
   critChance: 0.5
   armor: 0
-  coinPrefab: {fileID: 0}
+  coinPrefab: {fileID: 600978402350177634, guid: 0cf12f17390bc814ea2afadfdff2b9d3, type: 3}
 --- !u!114 &7043215971295788371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -188,7 +188,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapon: {fileID: 3677735660685370822}
---- !u!114 &3268854050655406454
+--- !u!114 &306055885413566788
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
