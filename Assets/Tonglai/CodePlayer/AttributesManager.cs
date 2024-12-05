@@ -11,7 +11,8 @@ public class AttributesManager : MonoBehaviour
     public float critChance = 0.5f;
     public int armor;
     public GameObject coinPrefab;
-    public AudioClip hitSound;
+    public AudioClip playerHitSound;
+    public AudioClip enemyHitSound;
     public GameObject gameOverCanvas; // Reference to Game Over Canvas
     private AudioSource audioSource;
 
@@ -38,6 +39,16 @@ public class AttributesManager : MonoBehaviour
                 Debug.LogWarning("Health Slider is not assigned!");
             }
 
+            // Phát âm thanh cho người chơi
+            if (playerHitSound != null)
+            {
+                audioSource.PlayOneShot(playerHitSound);
+            }
+            else
+            {
+                Debug.LogWarning("Player Hit Sound is not assigned!");
+            }
+
             if (health <= 0)
             {
                 // Hiển thị con trỏ chuột
@@ -61,10 +72,17 @@ public class AttributesManager : MonoBehaviour
                 .GetChild(0).transform
                 .GetComponent<Slider>();
             slider.value = health;
-            if (hitSound != null)
+
+            // Phát âm thanh cho kẻ địch
+            if (enemyHitSound != null)
             {
-                audioSource.PlayOneShot(hitSound);
+                audioSource.PlayOneShot(enemyHitSound);
             }
+            else
+            {
+                Debug.LogWarning("Enemy Hit Sound is not assigned!");
+            }
+
             if (health <= 0)
             {
                 EnemyDie();
