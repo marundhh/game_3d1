@@ -11,6 +11,7 @@ TagManager:
   - CinemachineTaget
   - Ground
   - Animal
+  - ruong
   layers:
   - Default
   - TransparentFX
